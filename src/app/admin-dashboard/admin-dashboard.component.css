@@ -1,0 +1,18 @@
+                 .sidebar_icon {
+                     font-size: 18px;
+                     display: inline;
+                     vertical-align: middle;
+                     position: relative;
+                     top: -1.2px;
+                     padding-right: 5px;
+                 }
+                 
+                 .chart_icon {
+                     color: #813e7e;
+                     font-size: 18px;
+                     display: inline;
+                     vertical-align: middle;
+                     position: relative;
+                     top: -1.2px;
+                     padding-right: 3px;
+                 }

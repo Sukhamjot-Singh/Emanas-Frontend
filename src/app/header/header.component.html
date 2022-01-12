@@ -1,0 +1,58 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar class="example-toolbar">
+        <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+        <a class="header-brand mr-2" (click)="dashboard()"><img src="assets/images/karnatakalogo.png" alt=""></a>
+        <a class="navbar-brand" (click)="dashboard()">eManas Mitra</a>
+        <span class="example-spacer"></span>
+        <nav class="sidenav" *ngIf="external !== 'true'">
+            <span class="mr-2">
+                 <a class="pointer" [matMenuTriggerFor]="menu">
+                    <mat-icon class="sidebar_icon1">person</mat-icon>
+                    {{userName}}
+                    <mat-icon class="sidebar_icon_arrow">keyboard_arrow_down</mat-icon>
+                </a>
+                <mat-menu class="mt-2" #menu="matMenu">
+                <a  mat-menu-item (click)="policy()" class="links">
+                    <mat-icon class="sidebar_icon">description</mat-icon> Privacy Policy
+                </a>
+                <a  mat-menu-item [routerLink]="[{outlets:{ sidenavoutlet:['updatePass'] }}]" class="links">
+                    <mat-icon class="sidebar_icon">lock</mat-icon> Change Password
+                </a>
+                <a mat-menu-item (click)="logOut()" class="links"> 
+                    <mat-icon class="sidebar_icon">logout</mat-icon> Logout
+                </a>
+                </mat-menu>
+            </span>
+        </nav>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav #snav [mode]="mode">
+            <mat-nav-list>
+                <div class="mobile-sidenav" *ngIf="external !== 'true'">
+                    <a mat-list-item>
+                        <mat-icon class=" sidebar_icon ">person</mat-icon> {{userName}}
+                    </a>
+                </div>
+
+                <a mat-list-item [routerLink]="[{outlets:{ sidenavoutlet:['userinfo'] }}]"> User Information </a>
+                <a mat-list-item [routerLink]="[{outlets:{ sidenavoutlet:['medicalrecords'] }}]"> Medical Records </a>
+                <a mat-list-item [routerLink]="[{outlets:{ sidenavoutlet:['viewconsents'] }}]"> View Consents</a>
+                <a mat-list-item routerLink="."> About us</a>
+                <div class="mobile-sidenav" *ngIf="external !== 'true'">
+
+                    <a mat-list-item [routerLink]="[{outlets:{ sidenavoutlet:['updatePass'] }}]">
+                        <mat-icon class="sidebar_icon ">lock</mat-icon> Change Password
+                    </a>
+                    <a mat-list-item (click)="logOut() ">
+                        <mat-icon class="sidebar_icon ">logout</mat-icon> Logout
+                    </a>
+                </div>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content class="sidenavstyle">
+            <router-outlet name='sidenavoutlet'></router-outlet>
+        </mat-sidenav-content>
+
+    </mat-sidenav-container>
+</div>

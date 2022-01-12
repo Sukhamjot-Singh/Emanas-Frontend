@@ -1,0 +1,485 @@
+        @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            background-color: #ffffff;
+            color: #242424;
+            overflow-x: hidden;
+            line-height: 1.5 !important;
+            font-family: 'Poppins', sans-serif !important;
+        }
+        
+        mat-card,
+        mat-card-title,
+        mat-card-content,
+        button,
+        table,
+        .mat-h3,
+        .mat-tab-label,
+        mat-toolbar,
+        mat-menu {
+            font-family: 'Poppins', sans-serif !important;
+        }
+        
+        .mat-slide-toggle.mat-checked .mat-slide-toggle-bar,
+        .mat-slide-toggle-thumb {
+            background-color: #813D7E !important;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        a {
+            color: #242424;
+        }
+        
+        .mat-form-field {
+            width: 100%;
+        }
+        
+        .mat-radio-button {
+            margin-right: 16px;
+        }
+        
+        .fill-remaining-space {
+            flex: 1 1 auto;
+        }
+        
+        mat-card,
+        .card {
+            box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.06) !important;
+            border-radius: 6px !important;
+            border: 1px solid #d6d6d6 !important;
+            width: 100%;
+        }
+        
+        .card-header {
+            border-bottom: 1px solid #d6d6d6 !important;
+        }
+        
+        .btn {
+            box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.06) !important;
+            font-size: 14px !important;
+            height: 40px !important;
+            padding: 0 12px 0 12px !important;
+        }
+        
+        .btn-primary {
+            background-color: #813D7E !important;
+            color: #fff;
+        }
+        
+        .btn-secondary {
+            background-color: #fff !important;
+            border: 1.5px solid #813D7E !important;
+            color: #813D7E !important;
+            font-weight: 500;
+        }
+        
+        .btn-secondary:hover {
+            border: 1.5px solid #813D7E !important;
+            color: #813D7E !important;
+        }
+        
+        .mat-toolbar-row,
+        .mat-toolbar-single-row {
+            padding: 0 !important;
+        }
+        
+        .mt--1 {
+            margin-top: -1rem;
+            margin-bottom: .8rem;
+        }
+        
+        .blue {
+            color: #813D7E !important;
+        }
+        
+        .grey {
+            color: #242424 !important;
+        }
+        
+        .input_button {
+            height: 40px;
+            font-size: 14px !important;
+            text-transform: inherit !important;
+            background-image: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+            display: flex;
+            box-sizing: border-box;
+            outline: none;
+            text-align: inherit;
+            text-align: left;
+            font-size: inherit;
+            font-weight: 400;
+            line-height: 1.125;
+            align-items: center;
+            border-radius: 5px 5px;
+            border: 1px solid rgba(0, 0, 0, .12);
+            white-space: nowrap;
+            padding: 0.5em 1em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .mat-checkbox-checked.mat-accent .mat-checkbox-ripple .mat-ripple-element {
+            opacity: 0.03 !important;
+            background-color: #813D7E!important;
+        }
+        
+        .mat-checkbox-checked.mat-accent .mat-checkbox-background,
+        .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+            background-color: #813D7E !important;
+        }
+        
+        .mat-radio-button.mat-accent .mat-radio-inner-circle {
+            background-color: #813D7E!important;
+        }
+        
+        .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+            border-color: #813D7E!important;
+        }
+        
+        .text-danger {
+            font-size: 12px;
+        }
+        
+        .warning {
+            background: red !important;
+            color: black;
+        }
+        
+        .green-snackbar {
+            background: green !important;
+        }
+        
+        .mat-tab-label {
+            min-width: 25px !important;
+            background-color: transparent;
+            /* color: #813D7E; */
+            font-weight: 600;
+            font-size: 16px;
+        }
+        /* Styles for the active tab label */
+        
+        .mat-tab-label.mat-tab-label-active {
+            min-width: 25px !important;
+            background-color: transparent;
+            /* color: #813D7E; */
+            font-weight: 600;
+        }
+        /* Styles for the ink bar */
+        
+        .mat-ink-bar {
+            background-color: green;
+        }
+        
+        table {
+            width: 100% !important;
+        }
+        
+        .mat-row:hover {
+            background-color: rgb(235, 237, 245);
+            color: #000000;
+            cursor: pointer;
+        }
+        
+        .btn:disabled,
+        .btn[disabled] {
+            border: 1px solid #b3b3b3 !important;
+            background-color: #dddddd !important;
+            color: #888 !important;
+        }
+        
+        @media (max-width: 766px) {
+            th.mat-header-cell:first-of-type {
+                padding-left: 0 !important;
+            }
+            .tbl {
+                overflow: auto !important;
+                display: block !important;
+                white-space: nowrap !important;
+                border-collapse: separate !important;
+                border-spacing: 20px 0px !important;
+            }
+        }
+        
+        .tbl {
+            border-spacing: 20px 0px !important;
+        }
+        
+        th,
+        .mat-header-cell {
+            font-weight: 500;
+            color: #813D7E;
+            font-size: 15px;
+        }
+        
+        .headings {
+            font-size: 17px !important;
+            line-height: 1.2;
+            font-weight: 500;
+            color: #813D7E;
+        }
+        
+        .sub_headings {
+            font-size: 17px !important;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        hr {
+            margin-top: 0.2rem !important;
+            margin-bottom: 0.8rem !important;
+        }
+        
+        .mat-tab-label-active {
+            color: #813D7E !important;
+            background: rgb(231, 241, 255) !important;
+            opacity: 1 !important;
+        }
+        
+        .f-12 {
+            font-size: 12px !important;
+        }
+        
+        .form-btn {
+            height: 32px !important;
+            box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.06) !important;
+            font-size: 15px !important;
+            padding: 0 16px 4px 16px !important;
+            line-height: 33px !important;
+        }
+        /* .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+            transform: translateY(-1.4em) scale(.75) !important;
+        } */
+        
+        .password-eye {
+            color: #242424;
+        }
+        
+        .mat-input-element {
+            line-height: 1 !important;
+        }
+        
+        .card-body {
+            font-size: 14px !important;
+            padding: 0.8rem 1.25rem !important;
+        }
+        
+        .form-control {
+            padding: 12px !important;
+            font-size: 14px !important;
+        }
+        
+        .dropdown_icon {
+            position: absolute;
+            float: right;
+            right: 0;
+            margin-right: 20px;
+            color: rgb(170, 170, 170);
+        }
+        
+        .search_icon {
+            position: absolute;
+            float: right;
+            right: 0;
+            margin-right: 32px;
+            color: rgb(170, 170, 170);
+        }
+        
+        @media (min-width: 1240px) {
+            .ml--6 {
+                margin-left: -3.5rem !important;
+            }
+            .ml--6 {
+                margin-left: -1.5rem !important;
+            }
+        }
+        
+        .select-css {
+            display: block;
+            font-size: 14px;
+            color: #242424;
+            text-align: inherit;
+            padding: 12px;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+            margin: 0;
+            min-width: 125px;
+            margin-top: 0px;
+            border: 1px solid #eadfdf;
+            box-shadow: 0 1px 0 1px rgba(0, 0, 0, .04);
+            border-radius: 6px;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            background-color: transparent;
+            background-repeat: no-repeat, repeat;
+            margin-top: 5px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        
+        .select-css::-ms-expand {
+            display: none;
+        }
+        
+        .select-css:hover {
+            border-color: #888;
+        }
+        
+        .select-css:focus {
+            outline: none;
+        }
+        
+        .select-css option {
+            font-weight: normal;
+        }
+        
+        .btns {
+            height: 36px !important;
+            width: 100% !important;
+        }
+        
+        .card {
+            font-size: 12px !important;
+        }
+        
+        .f-14 {
+            font-size: 14px !important;
+        }
+        
+        .add_btn {
+            background: none !important;
+            box-shadow: none;
+            border: none;
+            vertical-align: middle;
+            outline: none;
+            color: #813D7E;
+            margin-top: 8px;
+        }
+        
+        .add_btn:disabled {
+            color: #888;
+        }
+        
+        .wrapper-div {
+            vertical-align: middle;
+            line-height: 2;
+            display: table-cell;
+        }
+        
+        .float-right {
+            float: right;
+        }
+        
+        .modal-inline {
+            display: table;
+            width: 100%;
+        }
+        
+        .mat-radio-label-content {
+            color: #606060 !important;
+        }
+        
+        .mat-h2 {
+            color: #813D7E;
+        }
+        
+        .mt-6 {
+            margin-top: 4.5rem;
+        }
+        
+        .mat-radio-label-content {
+            min-width: 118px;
+        }
+        
+        .purple {
+            background-color: #813D7E;
+        }
+        
+        .btn-manual {
+            color: #813D7E;
+            background-color: #ffffff;
+            width: 100px;
+            border-radius: 12px;
+        }
+        
+        .mat-menu-item:hover,
+        .mat-menu-item:hover mat-icon {
+            text-decoration: none !important;
+            color: #fff !important;
+            background-color: #813D7E !important;
+        }
+        
+        .btn-tri {
+            width: auto !important;
+            font-size: 14px;
+            height: 32px !important;
+            line-height: 24px !important;
+        }
+        
+        .legend {
+            font-size: 12px !important;
+        }
+        
+        .legends {
+            display: inline;
+            vertical-align: middle;
+            position: relative;
+            top: 0px;
+            padding-right: 10px;
+            padding-left: 10px;
+            margin-right: 6px;
+            margin-left: 10px;
+            line-height: 2.2;
+        }
+        
+        .legends1 {
+            background-color: #813D7E;
+        }
+        
+        .legends2 {
+            background-color: #0033FF;
+        }
+        
+        .legends3 {
+            background-color: #FFCC00;
+        }
+        
+        .legends4 {
+            background-color: #00CC00;
+        }
+        
+        .numbers {
+            color: rgb(121, 55, 116);
+        }
+        
+        .legends5 {
+            background-color: #bb03b3;
+        }
+        
+        .legends6 {
+            background-color: #af0ec4;
+        }
+        
+        .legends7 {
+            background-color: #d710bd;
+        }
+        
+        .legends8 {
+            background-color: #e77af5;
+        }
+        
+        .legends9 {
+            background-color: #f9b1f0;
+        }
+        
+        .sidenavstyle {
+            background-image: url(assets/images/back.png);
+            /* background-repeat: no-repeat; */
+            background-size: 100%;
+        }
